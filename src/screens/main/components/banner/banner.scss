@@ -1,0 +1,45 @@
+@import 'variables.scss';
+
+.banner {
+  .navbar-item.has-dropdown.is-active, .navbar .navbar-dropdown {
+    background-color: $brand;
+  }
+  .navbar .navbar-dropdown {
+    background-color: $brand;
+    border-top-color: darken($brand, 2);
+  }
+  .navbar-item.has-dropdown {
+    color: $white;
+    &:focus .navbar-link,
+    &:hover .navbar-link,
+    &.is-active .navbar-link {
+      background-color: darken($brand, 2);
+    }
+  }
+
+  .badge {
+    max-height: 20px;
+    max-width: 150px;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+  }
+
+  .mascot {
+    position: absolute;
+    bottom: -1px;
+    right: 1rem;
+    z-index: 2;
+    @media screen and (max-width: $desktop - 1px) {
+      margin: auto;
+      position: relative;
+    }
+  }
+}

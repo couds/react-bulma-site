@@ -1,0 +1,21 @@
+$brand: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+
+// Update Bulma's global variables
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $brand;
+$link: $pink;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+$navbar-burger-color: white;
+$custom-colors: ("brand": ($brand, #FFF));
+
+@import "~bulma/sass/utilities/_all.sass";

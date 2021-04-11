@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2021-04-10 18:11+0200\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: es\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/screens/main/main.js:24
+msgid "React-Bulma-Components is a library that will allow you to easily use all capabilities of CSS Bulma Framework using components in a declarative way."
+msgstr "React-Bulma-Components es una libreria que te permitira usar facilmente todas las capacidades del Framework de CSS Bulma usando simples componentes de React"
+
+#: src/screens/main/components/banner/banner.js:16
+msgid "The React wrapper for <0>Bulma</0> that we always wanted"
+msgstr "La libreria de React para <0>Bulma</0> que merecemos"
+
+#: src/screens/main/main.js:21
+msgid "Use Bulma on your React projects with ease"
+msgstr "Usa Bulma en tus proyectos en React de forma sencilla"
