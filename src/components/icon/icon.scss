@@ -1,9 +1,16 @@
 
 .icon {
+  &.is-auto {
+    width: 1em;
+    height: 1em;
+  }
+  &.is-small {
+    font-size: 1em;
+  }
   &.is-medium {
-    font-size: 2rem;
+    font-size: 2em;
   }
   &.is-large {
-    font-size: 3rem;
+    font-size: 3em;
   }
 }

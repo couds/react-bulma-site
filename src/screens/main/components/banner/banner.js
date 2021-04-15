@@ -1,6 +1,7 @@
 import React from 'react';
-import Layout from 'components/layout';
 import {
+  Block,
+  Button,
   Columns,
   Container,
   Element,
@@ -12,66 +13,117 @@ import { Trans } from '@lingui/macro';
 import mascot from 'assets/images/happy-mascot.webp';
 
 import './banner.scss';
+import Highlight from 'components/highlight';
+import Icon from 'components/icon';
+import Link from 'components/link';
 
 const Banner = () => {
   return (
-    <Hero
-      className="banner"
-      display="relative"
-      size="medium"
-      color="brand"
-      gradient
-      pb={2}
-    >
-      <Hero.Header>
-        <Layout.Navbar />
-      </Hero.Header>
-      <Hero.Body>
+    <Hero id="banner" display="relative" size="medium" color="brand" pb={2}>
+      <Hero.Body className="body">
         <Container>
-          <Columns>
+          <Columns centered>
+            <Columns.Column
+              alignItems="center"
+              justifyContent="center"
+              display="flex"
+              narrow
+            >
+              <Icon name="logo" size="auto" className="logo" />
+            </Columns.Column>
             <Columns.Column
               justifyContent="center"
               display="flex"
               flexDirection="column"
+              narrow
             >
-              <Heading renderAs="h1">React Bulma Component</Heading>
-              <Heading size={3} renderAs="h2" subtitle>
-                <Trans>
-                  The React wrapper for <b>Bulma</b> that we always wanted
-                </Trans>
-              </Heading>
-              <Element display="flex">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.npmjs.com/package/react-bulma-components"
-                  className="badge"
+              <Columns breakpoint="mobile" centered>
+                <Columns.Column
+                  textAlign="center"
+                  style={{ maxWidth: '100%' }}
+                  narrow
                 >
-                  <img
-                    alt="downloads per month"
-                    src="https://img.shields.io/npm/dm/react-bulma-components.svg"
-                  />
-                </a>
-                <iframe
-                  title="github-stars"
-                  className="badge"
-                  src="https://ghbtns.com/github-btn.html?user=couds&repo=react-bulma-components&type=star&count=true&size=medium"
-                />
-              </Element>
+                  <Heading size={2} renderAs="h1">
+                    React Bulma Components
+                  </Heading>
+                  <Heading size={5} renderAs="h2">
+                    <Trans>
+                      The React wrapper for <b>Bulma</b> that we always wanted
+                    </Trans>
+                  </Heading>
+                  <Block style={{ height: 49, maxWidth: 500 }}>
+                    <Highlight language="bash">
+                      npm i --save react-bulma-components
+                    </Highlight>
+                  </Block>
+                  <Element display="flex" className="is-centered-touch">
+                    <Block
+                      renderAs="a"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.npmjs.com/package/react-bulma-components"
+                      className="badge"
+                    >
+                      <img
+                        alt="downloads per month"
+                        src="https://img.shields.io/npm/dm/react-bulma-components.svg"
+                      />
+                    </Block>
+                    <Block
+                      renderAs="iframe"
+                      title="github-stars"
+                      className="badge"
+                      src="https://ghbtns.com/github-btn.html?user=couds&repo=react-bulma-components&type=star&count=true&size=medium"
+                    />
+                  </Element>
+                  <Button.Group className="is-centered-touch">
+                    <Button
+                      color="brand"
+                      inverted
+                      renderAs={Link}
+                      to="/getting-started/"
+                    >
+                      <Icon name="books" />
+                      <span>
+                        <Trans>First Steps</Trans>
+                      </span>
+                    </Button>
+                    <Button
+                      color="transparent"
+                      renderAs="a"
+                      className="btn-storybook"
+                      href="https://couds.github.io/react-bulma-components/"
+                      target="_blank"
+                    >
+                      <Icon name="storybook" />
+                      <span>
+                        <Trans>Storybook Demo</Trans>
+                      </span>
+                    </Button>
+                  </Button.Group>
+                </Columns.Column>
+              </Columns>
             </Columns.Column>
-            <Columns.Column justifyContent="center" display="flex">
-              <video controls>
-                <source src="https://cdn.videvo.net/videvo_files/video/free/2013-07/small_watermarked/hd0051_preview.webm" />
-              </video>
+            <Columns.Column
+              display="hidden"
+              mobile={{ display: 'hidden' }}
+              justifyContent="center"
+            >
+              <iframe
+                src="https://player.vimeo.com/video/237784510?title=0&byline=0&portrait=0"
+                title="bulma-intro"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                width="640"
+                height="360"
+                style={{ width: '100%', minHeight: 180 }}
+              />
             </Columns.Column>
           </Columns>
         </Container>
       </Hero.Body>
-      <Container
-        touch={{ display: 'hidden' }}
-        display="relative"
-        style={{ width: '100%' }}
-      >
+      <Container display="relative" style={{ width: '100%' }}>
         <Image src={mascot} size={128} className="mascot" />
       </Container>
       <svg

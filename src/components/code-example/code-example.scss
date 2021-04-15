@@ -1,0 +1,20 @@
+@import 'variables.scss';
+
+.code-example {
+  pre {
+    border-radius: 0 !important;
+    margin: 0 !important;
+  }
+  .code {
+    display: flex;
+    align-items: stretch;
+    pre {
+      flex: 1;
+      margin: 0 !important;
+      font-size: 14px;
+      code {
+        height: 100%;
+      }
+    }
+  }
+}

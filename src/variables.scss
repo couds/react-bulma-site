@@ -12,10 +12,8 @@ $primary: $brand;
 $link: $pink;
 
 // Update some of Bulma's component variables
-$control-border-width: 2px;
-$input-border-color: transparent;
-$input-shadow: none;
 $navbar-burger-color: white;
+$navbar-dropdown-arrow: white;
 $custom-colors: ("brand": ($brand, #FFF));
 
 @import "~bulma/sass/utilities/_all.sass";

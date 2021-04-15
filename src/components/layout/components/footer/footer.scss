@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+#footer {
+  background-color: $scheme-main-bis ;
+  padding: 2rem 0;
+  a.is-active {
+    font-weight: bold;
+  }
+}

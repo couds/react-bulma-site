@@ -1,12 +1,20 @@
 import React from 'react';
+import { Block, Hero } from 'react-bulma-components';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 
 const Layout = ({ children }) => {
-  return <div>{children}</div>;
+  return (
+    <>
+      <Hero color="brand">
+        <Hero.Header>
+          <Navbar />
+        </Hero.Header>
+      </Hero>
+      <Block style={{ flex: 1 }}>{children}</Block>
+      <Footer />
+    </>
+  );
 };
-
-Layout.Navbar = Navbar;
-Layout.Footer = Footer;
 
 export default Layout;

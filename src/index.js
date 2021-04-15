@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import reportWebVitals from 'reportWebVitals';
-import Main from 'screens/main';
-
-import './index.scss';
 import {
   Redirect,
   Route,
@@ -13,6 +10,22 @@ import {
   Switch,
   useParams,
 } from 'react-router-dom';
+import './index.scss';
+import Layout from 'components/layout';
+import { en, es } from 'make-plural/plurals';
+
+i18n.loadLocaleData({
+  en: { plurals: en },
+  es: { plurals: es },
+});
+
+const Main = lazy(() => {
+  return import('screens/main');
+});
+
+const GettingStarted = lazy(() => {
+  return import('screens/getting-started');
+});
 
 const App = () => {
   const [messages, setMessages] = useState();
@@ -29,10 +42,18 @@ const App = () => {
   if (!messages) {
     return <div />;
   }
-
   return (
     <I18nProvider i18n={i18n}>
-      <Main />
+      <Layout>
+        <Suspense fallback={<div />}>
+          <Switch>
+            <Route path="/:lang/" exact>
+              <Main />
+            </Route>
+            <Route path="/:lang/getting-started" component={GettingStarted} />
+          </Switch>
+        </Suspense>
+      </Layout>
     </I18nProvider>
   );
 };

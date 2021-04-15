@@ -1,0 +1,20 @@
+@import 'variables.scss';
+
+#navbar {
+  .navbar-item.has-dropdown.is-active, .navbar-dropdown {
+    background-color: $brand;
+  }
+  .navbar-dropdown {
+    background-color: $brand;
+    border-top-color: darken($brand, 2);
+  }
+  .navbar-item {
+    &:focus .navbar-link,
+    &:hover .navbar-link,
+    &:focus,
+    &.is-active .navbar-link {
+      color: $white;
+      background-color: darken($brand, 2);
+    }
+  }
+}

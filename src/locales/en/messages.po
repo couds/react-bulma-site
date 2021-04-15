@@ -13,14 +13,88 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/screens/main/main.js:24
+#: src/components/layout/components/footer/footer.js:23
+#~ msgid "All right reserved ${0}"
+#~ msgstr "All right reserved ${0}"
+
+#: src/components/layout/components/footer/footer.js:23
+msgid "All right reserved {0}"
+msgstr "All right reserved {0}"
+
+#: src/screens/main/main.js:39
+msgid "Easy to use"
+msgstr "Easy to use"
+
+#: src/components/layout/components/navbar/navbar.js:41
+#: src/components/layout/components/navbar/navbar.js:60
+msgid "English"
+msgstr "English"
+
+#: src/screens/main/components/banner/banner.js:88
+msgid "First Steps"
+msgstr "First Steps"
+
+#: src/screens/main/main.js:51
+msgid "Include only the code you use"
+msgstr "Include only the code you use"
+
+#: src/screens/main/main.js:42
+msgid "Just import it and use it"
+msgstr "Just import it and use it"
+
+#: src/screens/main/main.js:30
+msgid "Light Weight"
+msgstr "Light Weight"
+
+#: src/screens/main/main.js:60
+msgid "Made thinking on <0>Mobile</0> first"
+msgstr "Made thinking on <0>Mobile</0> first"
+
+#: src/screens/main/main.js:48
+msgid "Modular"
+msgstr "Modular"
+
+#: src/screens/main/main.js:33
+msgid "No external dependencies"
+msgstr "No external dependencies"
+
+#: src/screens/main/main.js:18
 msgid "React-Bulma-Components is a library that will allow you to easily use all capabilities of CSS Bulma Framework using components in a declarative way."
 msgstr "React-Bulma-Components is a library that will allow you to easily use all capabilities of CSS Bulma Framework using components in a declarative way."
 
-#: src/screens/main/components/banner/banner.js:16
+#: src/screens/main/main.js:57
+msgid "Responsive"
+msgstr "Responsive"
+
+#: src/components/layout/components/navbar/navbar.js:44
+#: src/components/layout/components/navbar/navbar.js:67
+msgid "Spanish"
+msgstr "Spanish"
+
+#: src/screens/main/components/banner/banner.js:100
+msgid "Storybook Demo"
+msgstr "Storybook Demo"
+
+#: src/screens/main/components/banner/banner.js:50
 msgid "The React wrapper for <0>Bulma</0> that we always wanted"
 msgstr "The React wrapper for <0>Bulma</0> that we always wanted"
 
-#: src/screens/main/main.js:21
+#: src/components/code-example/code-view.js:22
+msgid "Toggle to React"
+msgstr "Toggle to React"
+
+#: src/components/code-example/code-view.js:20
+msgid "Toggle to html"
+msgstr "Toggle to html"
+
+#: src/screens/main/main.js:15
 msgid "Use Bulma on your React projects with ease"
 msgstr "Use Bulma on your React projects with ease"
+
+#: src/screens/main/components/example/example.js:75
+#~ msgid "easy to use"
+#~ msgstr "Easy to use"
+
+#: src/screens/main/components/example/example.js:78
+#~ msgid "easy to use description"
+#~ msgstr "Just import it and use it"
