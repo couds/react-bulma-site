@@ -40,6 +40,12 @@ const CustomNavbar = () => {
             </Navbar.Item>
           </Navbar.Container>
           <Navbar.Container align="right">
+            <Navbar.Item
+              href="https://github.com/couds/react-vulma-components"
+              target="_blank"
+            >
+              <Icon name="github" />
+            </Navbar.Item>
             <Navbar.Item desktop={{ display: 'hidden' }}>
               <Button.Group align="center">
                 <Button color="ghost">

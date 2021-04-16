@@ -20,7 +20,7 @@ import Link from 'components/link';
 const Banner = () => {
   return (
     <Hero id="banner" display="relative" size="medium" color="brand" pb={2}>
-      <Hero.Body className="body">
+      <Hero.Body className="body" pt="6">
         <Container>
           <Columns centered>
             <Columns.Column
@@ -38,20 +38,14 @@ const Banner = () => {
               narrow
             >
               <Columns breakpoint="mobile" centered>
-                <Columns.Column
-                  textAlign="center"
-                  style={{ maxWidth: '100%' }}
-                  narrow
-                >
-                  <Heading size={2} renderAs="h1">
-                    React Bulma Components
-                  </Heading>
+                <Columns.Column style={{ maxWidth: 500 }} narrow>
                   <Heading size={5} renderAs="h2">
-                    <Trans>
-                      The React wrapper for <b>Bulma</b> that we always wanted
-                    </Trans>
+                    <Trans>React Bulma Components</Trans>
                   </Heading>
-                  <Block style={{ height: 49, maxWidth: 500 }}>
+                  <Heading subtitle size={2} renderAs="h1" textWeight="bold">
+                    <Trans>Use Bulma on your React projects with ease</Trans>
+                  </Heading>
+                  <Block style={{ height: 49 }}>
                     <Highlight language="bash">
                       npm i --save react-bulma-components
                     </Highlight>
