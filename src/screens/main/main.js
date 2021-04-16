@@ -11,8 +11,10 @@ const Main = () => {
       <Banner />
       <Container renderAs={Block} mt="6" max breakpoint="widescreen" px={5}>
         <Container renderAs={Block}>
-          <Heading renderAs="h3" size={3}>
-            <Trans>Use Bulma on your React projects with ease</Trans>
+          <Heading renderAs="h2" size={4}>
+            <Trans>
+              The React wrapper for <b>Bulma</b> that we always wanted
+            </Trans>
           </Heading>
           <Heading subtitle size={5}>
             <Trans>

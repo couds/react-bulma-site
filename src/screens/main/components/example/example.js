@@ -5,12 +5,6 @@ import Icon from 'components/icon';
 
 const exampleCode = {
   reactCode: `
-<Form.Field display="flex" justifyContent="center">
-  <Icon text color="brand" size="large">
-    <i className="custom-logo" />
-  </Icon>
-  <Form.Label>React Bulma Components</Form.Label>
-</Form.Field>
 <Form.Field>
   <Form.Label>Name</Form.Label>
   <Form.Control>
@@ -34,12 +28,6 @@ const exampleCode = {
 </Button.Group>
 `,
   bulmaCode: `
-<div class="field is-justify-content-center is-flex">
-  <span class="icon is-large has-text-brand icon-text">
-    <i class="rbc-icon custom-logo"></i>
-  </span>
-  <label class="label">React Bulma Components</label>
-</div>
 <div class="field">
   <label class="label">Name</label>
   <div class="control has-icons-left">
@@ -72,20 +60,17 @@ const Example = () => {
   return (
     <Block>
       <Box paddingless style={{ overflow: 'hidden' }}>
-        <CodeExample {...exampleCode} alignment="horizontal">
+        <CodeExample
+          codeMaxHeight={481}
+          {...exampleCode}
+          alignment="horizontal"
+        >
           <Element
             p={6}
             display="flex"
             flexDirection="column"
             justifyContent="center"
-            style={{ width: '100%', height: 552 }}
           >
-            <Form.Field display="flex" justifyContent="center">
-              <Icon text color="brand" name="logo" size="large" />
-              <Form.Label style={{ lineHeight: '3em' }}>
-                React Bulma Components
-              </Form.Label>
-            </Form.Field>
             <Form.Field>
               <Form.Label>Name</Form.Label>
               <Form.Control iconType={Icon}>

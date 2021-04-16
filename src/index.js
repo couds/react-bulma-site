@@ -13,6 +13,7 @@ import {
 import './index.scss';
 import Layout from 'components/layout';
 import { en, es } from 'make-plural/plurals';
+import Footer from 'components/footer/footer';
 
 i18n.loadLocaleData({
   en: { plurals: en },
@@ -46,12 +47,15 @@ const App = () => {
     <I18nProvider i18n={i18n}>
       <Layout>
         <Suspense fallback={<div />}>
-          <Switch>
-            <Route path="/:lang/" exact>
-              <Main />
-            </Route>
-            <Route path="/:lang/getting-started" component={GettingStarted} />
-          </Switch>
+          <div style={{ flex: 1 }}>
+            <Switch>
+              <Route path="/:lang/" exact>
+                <Main />
+              </Route>
+              <Route path="/:lang/getting-started" component={GettingStarted} />
+            </Switch>
+          </div>
+          <Footer />
         </Suspense>
       </Layout>
     </I18nProvider>

@@ -38,11 +38,15 @@ const Banner = () => {
               narrow
             >
               <Columns breakpoint="mobile" centered>
-                <Columns.Column style={{ maxWidth: 500 }} narrow>
-                  <Heading size={5} renderAs="h2">
+                <Columns.Column style={{ maxWidth: 500, width: '100%' }} narrow>
+                  <Heading
+                    size={5}
+                    renderAs="h2"
+                    style={{ marginBottom: '0.5rem' }}
+                  >
                     <Trans>React Bulma Components</Trans>
                   </Heading>
-                  <Heading subtitle size={2} renderAs="h1" textWeight="bold">
+                  <Heading size={2} renderAs="h1">
                     <Trans>Use Bulma on your React projects with ease</Trans>
                   </Heading>
                   <Block style={{ height: 49 }}>
@@ -59,6 +63,8 @@ const Banner = () => {
                       className="badge"
                     >
                       <img
+                        width="140"
+                        height="20"
                         alt="downloads per month"
                         src="https://img.shields.io/npm/dm/react-bulma-components.svg"
                       />
@@ -97,22 +103,6 @@ const Banner = () => {
                   </Button.Group>
                 </Columns.Column>
               </Columns>
-            </Columns.Column>
-            <Columns.Column
-              display="hidden"
-              mobile={{ display: 'hidden' }}
-              justifyContent="center"
-            >
-              <iframe
-                src="https://player.vimeo.com/video/237784510?title=0&byline=0&portrait=0"
-                title="bulma-intro"
-                frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                width="640"
-                height="360"
-                style={{ width: '100%', minHeight: 180 }}
-              />
             </Columns.Column>
           </Columns>
         </Container>
