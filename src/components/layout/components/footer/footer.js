@@ -7,8 +7,8 @@ import './footer.scss';
 const CustomFooter = () => {
   return (
     <footer id="footer">
-      <Container>
-        <Columns>
+      <Container px="3">
+        <Columns breakpoint="mobile">
           <Columns.Column size="4">
             <ul>
               <li>
