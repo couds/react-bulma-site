@@ -13,11 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/layout/components/footer/footer.js:23
-#~ msgid "All right reserved ${0}"
-#~ msgstr "All right reserved ${0}"
-
-#: src/components/layout/components/footer/footer.js:28
+#: src/components/footer/footer.js:28
 msgid "All right reserved {0}"
 msgstr "All right reserved {0}"
 
@@ -26,17 +22,13 @@ msgid "Easy to use"
 msgstr "Easy to use"
 
 #: src/components/layout/components/navbar/navbar.js:44
-#: src/components/layout/components/navbar/navbar.js:77
+#: src/components/layout/components/navbar/navbar.js:81
 msgid "English"
 msgstr "English"
 
-#: src/screens/main/components/banner/banner.js:86
+#: src/screens/main/components/banner/banner.js:88
 msgid "First Steps"
 msgstr "First Steps"
-
-#: src/screens/getting-started/getting-started.js:12
-msgid "Getting Started with React Bulma Components"
-msgstr "Getting Started with React Bulma Components"
 
 #: src/screens/main/main.js:53
 msgid "Include only the code you use"
@@ -51,8 +43,12 @@ msgid "Light Weight"
 msgstr "Light Weight"
 
 #: src/screens/main/main.js:62
-msgid "Made thinking on <0>Mobile</0> first"
-msgstr "Made thinking on <0>Mobile</0> first"
+msgid "Made thinking on <0>Mobile first</0>"
+msgstr "Made thinking on <0>Mobile first</0>"
+
+#: src/screens/getting-started/getting-started.js:17
+msgid "Meanwhile check out <0>Storybook</0> for more details"
+msgstr "Meanwhile check out <0>Storybook</0> for more details"
 
 #: src/screens/main/main.js:50
 msgid "Modular"
@@ -74,12 +70,16 @@ msgstr "React-Bulma-Components is a library that will allow you to easily use al
 msgid "Responsive"
 msgstr "Responsive"
 
+#: src/screens/getting-started/getting-started.js:14
+msgid "Sorry this page its still on develpment"
+msgstr "Sorry this page its still on develpment"
+
 #: src/components/layout/components/navbar/navbar.js:47
-#: src/components/layout/components/navbar/navbar.js:84
+#: src/components/layout/components/navbar/navbar.js:88
 msgid "Spanish"
 msgstr "Spanish"
 
-#: src/screens/main/components/banner/banner.js:98
+#: src/screens/main/components/banner/banner.js:100
 msgid "Storybook Demo"
 msgstr "Storybook Demo"
 
@@ -98,11 +98,3 @@ msgstr "Toggle to html"
 #: src/screens/main/components/banner/banner.js:50
 msgid "Use Bulma on your React projects with ease"
 msgstr "Use Bulma on your React projects with ease"
-
-#: src/screens/main/components/example/example.js:75
-#~ msgid "easy to use"
-#~ msgstr "Easy to use"
-
-#: src/screens/main/components/example/example.js:78
-#~ msgid "easy to use description"
-#~ msgstr "Just import it and use it"

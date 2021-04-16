@@ -13,58 +13,54 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/layout/components/footer/footer.js:23
-#~ msgid "All right reserved ${0}"
-#~ msgstr ""
-
-#: src/components/layout/components/footer/footer.js:28
+#: src/components/footer/footer.js:28
 msgid "All right reserved {0}"
-msgstr ""
+msgstr "Todos los derechos reservados {0}"
 
 #: src/screens/main/main.js:41
 msgid "Easy to use"
-msgstr ""
+msgstr "Facil de usar"
 
 #: src/components/layout/components/navbar/navbar.js:44
-#: src/components/layout/components/navbar/navbar.js:77
+#: src/components/layout/components/navbar/navbar.js:81
 msgid "English"
-msgstr ""
+msgstr "English"
 
-#: src/screens/main/components/banner/banner.js:86
+#: src/screens/main/components/banner/banner.js:88
 msgid "First Steps"
-msgstr ""
-
-#: src/screens/getting-started/getting-started.js:12
-msgid "Getting Started with React Bulma Components"
-msgstr ""
+msgstr "Primeros pasos"
 
 #: src/screens/main/main.js:53
 msgid "Include only the code you use"
-msgstr ""
+msgstr "Incluye solo el codigo que necesitas"
 
 #: src/screens/main/main.js:44
 msgid "Just import it and use it"
-msgstr ""
+msgstr "Tan solo importalo y usalo"
 
 #: src/screens/main/main.js:32
 msgid "Light Weight"
-msgstr ""
+msgstr "Ligero"
 
 #: src/screens/main/main.js:62
-msgid "Made thinking on <0>Mobile</0> first"
-msgstr ""
+msgid "Made thinking on <0>Mobile first</0>"
+msgstr "Hecho pensando en <0>Mobile first</0> "
+
+#: src/screens/getting-started/getting-started.js:17
+msgid "Meanwhile check out <0>Storybook</0> for more details"
+msgstr "Mientras puedes revisar <0>Storybook</0> para mas detalles"
 
 #: src/screens/main/main.js:50
 msgid "Modular"
-msgstr ""
+msgstr "Modular"
 
 #: src/screens/main/main.js:35
 msgid "No external dependencies"
-msgstr ""
+msgstr "Sin dependencias externas"
 
 #: src/screens/main/components/banner/banner.js:47
 msgid "React Bulma Components"
-msgstr ""
+msgstr "React Bulma Components"
 
 #: src/screens/main/main.js:20
 msgid "React-Bulma-Components is a library that will allow you to easily use all capabilities of CSS Bulma Framework using components in a declarative way."
@@ -72,16 +68,20 @@ msgstr "React-Bulma-Components es una libreria que te permitira usar facilmente 
 
 #: src/screens/main/main.js:59
 msgid "Responsive"
-msgstr ""
+msgstr "Responsive"
+
+#: src/screens/getting-started/getting-started.js:14
+msgid "Sorry this page its still on develpment"
+msgstr "Esta pagina aun esta en desarrollo"
 
 #: src/components/layout/components/navbar/navbar.js:47
-#: src/components/layout/components/navbar/navbar.js:84
+#: src/components/layout/components/navbar/navbar.js:88
 msgid "Spanish"
-msgstr ""
+msgstr "Español"
 
-#: src/screens/main/components/banner/banner.js:98
+#: src/screens/main/components/banner/banner.js:100
 msgid "Storybook Demo"
-msgstr ""
+msgstr "Storybook"
 
 #: src/screens/main/main.js:15
 msgid "The React wrapper for <0>Bulma</0> that we always wanted"
@@ -98,11 +98,3 @@ msgstr "Cambiar a Html"
 #: src/screens/main/components/banner/banner.js:50
 msgid "Use Bulma on your React projects with ease"
 msgstr "Usa Bulma en React facilmente"
-
-#: src/screens/main/components/example/example.js:75
-#~ msgid "easy to use"
-#~ msgstr "Facil de usar"
-
-#: src/screens/main/components/example/example.js:78
-#~ msgid "easy to use description"
-#~ msgstr "Tan solo importa los componentes y usalos"

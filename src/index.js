@@ -9,6 +9,7 @@ import {
   BrowserRouter as Router,
   Switch,
   useParams,
+  useLocation,
 } from 'react-router-dom';
 import './index.scss';
 import Layout from 'components/layout';
@@ -31,6 +32,12 @@ const GettingStarted = lazy(() => {
 const App = () => {
   const [messages, setMessages] = useState();
   const { lang } = useParams();
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     import(`locales/${lang}/messages`).then((locale) => {

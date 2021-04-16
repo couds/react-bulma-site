@@ -70,6 +70,7 @@ const Example = () => {
             display="flex"
             flexDirection="column"
             justifyContent="center"
+            style={{ height: '100%' }}
           >
             <Form.Field>
               <Form.Label>Name</Form.Label>

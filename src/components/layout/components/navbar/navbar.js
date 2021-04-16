@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Container, Element, Navbar } from 'react-bulma-components';
 import Icon from 'components/icon';
-import { useParams, Link as RouterLink } from 'react-router-dom';
+import { useParams, Link as RouterLink, useLocation } from 'react-router-dom';
 import { Trans } from '@lingui/macro';
 import Link from 'components/link';
 
@@ -10,6 +10,12 @@ import './navbar.scss';
 const CustomNavbar = () => {
   const [showMenu, setShowMenu] = useState();
   const { lang } = useParams();
+  const { pathname } = useLocation();
+
+  console.log('->', pathname);
+
+  const regex = new RegExp(`^/${lang}/`);
+
   return (
     <Navbar id="navbar" active={showMenu}>
       <Container>
@@ -40,10 +46,20 @@ const CustomNavbar = () => {
             </Navbar.Item>
             <Navbar.Item desktop={{ display: 'hidden' }}>
               <Button.Group align="center">
-                <Button color="ghost">
+                <Button
+                  color="ghost"
+                  to={pathname.replace(regex, '/en/')}
+                  active={lang === 'en'}
+                  renderAs={RouterLink}
+                >
                   <Trans>English</Trans>
                 </Button>
-                <Button color="ghost">
+                <Button
+                  color="ghost"
+                  to={pathname.replace(regex, '/es/')}
+                  active={lang === 'wa'}
+                  renderAs={RouterLink}
+                >
                   <Trans>Spanish</Trans>
                 </Button>
               </Button.Group>
@@ -74,14 +90,14 @@ const CustomNavbar = () => {
               <Navbar.Dropdown right>
                 <Navbar.Item
                   textAlign="right"
-                  to="/en"
+                  to={pathname.replace(regex, '/en/')}
                   active={lang === 'en'}
                   renderAs={RouterLink}
                 >
                   <Trans>English</Trans>
                 </Navbar.Item>
                 <Navbar.Item
-                  to="/es"
+                  to={pathname.replace(regex, '/es/')}
                   active={lang === 'es'}
                   renderAs={RouterLink}
                 >

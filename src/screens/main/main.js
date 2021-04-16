@@ -60,7 +60,7 @@ const Main = () => {
               </Heading>
               <Heading subtitle size={6}>
                 <Trans>
-                  Made thinking on <b>Mobile</b> first
+                  Made thinking on <b>Mobile first</b>
                 </Trans>
               </Heading>
             </Columns.Column>
