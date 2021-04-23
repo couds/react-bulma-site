@@ -13,7 +13,14 @@ const Main = () => {
   return (
     <>
       <Banner />
-      <Container renderAs={Block} my="6" max breakpoint="widescreen" px={5}>
+      <Container
+        renderAs={Block}
+        my="6"
+        max
+        breakpoint="widescreen"
+        px={5}
+        style={{ maxWidth: '100%' }}
+      >
         <Container my={6} renderAs={Block}>
           <Heading renderAs="h2" size={3}>
             <Trans>
