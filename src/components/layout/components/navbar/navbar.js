@@ -63,8 +63,10 @@ const CustomNavbar = () => {
           </Navbar.Container>
           <Navbar.Container touch={{ display: 'hidden' }} align="right">
             <Navbar.Item
-              href="https://couds.github.io/react-bulma-components/"
-              target="_blank"
+              renderAs={Link}
+              to="/storybook"
+              exact
+              activeClassName="is-active"
             >
               <Icon name="storybook" />
             </Navbar.Item>

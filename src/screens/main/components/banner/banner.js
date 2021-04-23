@@ -90,10 +90,9 @@ const Banner = () => {
                     </Button>
                     <Button
                       color="transparent"
-                      renderAs="a"
                       className="btn-storybook"
-                      href="https://couds.github.io/react-bulma-components/"
-                      target="_blank"
+                      renderAs={Link}
+                      to="/storybook"
                     >
                       <Icon name="storybook" />
                       <span>

@@ -22,13 +22,9 @@ const CustomFooter = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://couds.github.io/react-bulma-components/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <Link to="/storybook">
                   <Trans>Storybook</Trans>
-                </a>
+                </Link>
               </li>
             </ul>
           </Columns.Column>

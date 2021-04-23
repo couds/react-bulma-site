@@ -29,6 +29,10 @@ const GettingStarted = lazy(() => {
   return import('screens/getting-started');
 });
 
+const Storybook = lazy(() => {
+  return import('screens/storybook');
+});
+
 const App = () => {
   const [messages, setMessages] = useState();
   const { lang } = useParams();
@@ -54,12 +58,15 @@ const App = () => {
     <I18nProvider i18n={i18n}>
       <Layout>
         <Suspense fallback={<div />}>
-          <div style={{ flex: 1 }}>
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
             <Switch>
               <Route path="/:lang/" exact>
                 <Main />
               </Route>
               <Route path="/:lang/getting-started" component={GettingStarted} />
+              <Route path="/:lang/storybook">
+                <Storybook />
+              </Route>
             </Switch>
           </div>
           <Footer />
