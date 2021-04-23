@@ -44,10 +44,9 @@ const ColumnsExample = () => {
           </Message.Body>
         </Message>
       )}
-      <Button.Group hasAddons align="center">
+      <Button.Group align="center">
         <Button
-          rounded
-          color="info"
+          color="brand"
           disabled={columns >= 12}
           onClick={() => {
             return setColumns((c) => {
@@ -58,8 +57,8 @@ const ColumnsExample = () => {
           <Trans>Add Column</Trans>
         </Button>
         <Button
-          rounded
           color="danger"
+          colorVariant="light"
           disabled={columns <= 1}
           onClick={() => {
             return setColumns((c) => {

@@ -57,7 +57,7 @@ const Main = () => {
           </Trans>
         </Heading>
       </Feature>
-      <Container renderAs={Block} my="6">
+      <Container renderAs={Block} my="6" style={{ width: '100%' }}>
         <ColumnsExample />
       </Container>
     </>
