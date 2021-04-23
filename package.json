@@ -12,7 +12,8 @@
     "eject": "react-scripts eject",
     "generate:icons": "svgtofont --sources ./src/components/icon/svg --output ./src/components/icon/fonts",
     "extract": "lingui extract",
-    "compile": "lingui compile"
+    "generate:locales": "lingui compile",
+    "compile": "npm run generate:icons && npm run generate:locales"
   },
   "dependencies": {
     "@lingui/react": "3.8.9",
