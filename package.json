@@ -8,6 +8,7 @@
     "start": "NODE_PATH=src react-scripts start",
     "prebuild": "npm run compile",
     "build": "react-scripts build",
+    "postbuild": "cp _redirects build/_redirects",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "generate:icons": "svgtofont --sources ./src/components/icon/svg --output ./src/components/icon/fonts",
