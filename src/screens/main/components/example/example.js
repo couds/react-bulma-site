@@ -59,7 +59,7 @@ const Example = () => {
   };
   return (
     <Block>
-      <Box paddingless style={{ overflow: 'hidden' }}>
+      <Box paddingless style={{ overflow: 'hidden', minHeight: 457 }}>
         <CodeExample
           codeMaxHeight={481}
           {...exampleCode}

@@ -1,4 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react';
+import './highlight.scss';
 
 const SyntaxHighlighter = lazy(() => {
   return import('react-syntax-highlighter').then(({ PrismLight }) => {
@@ -26,7 +27,7 @@ const Highlight = ({ style, language, ...props }) => {
   }, [language, SyntaxHighlighter.registerLanguage]);
   return (
     <Suspense fallback={<div />}>
-      <div style={{ flex: 1, ...style }}>
+      <div className="code-highlighter" style={{ flex: 1, ...style }}>
         <SyntaxHighlighter {...props} language={language} style={codeStyle} />
       </div>
     </Suspense>

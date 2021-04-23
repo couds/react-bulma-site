@@ -12,9 +12,7 @@ const CustomNavbar = () => {
   const { lang } = useParams();
   const { pathname } = useLocation();
 
-  console.log('->', pathname);
-
-  const regex = new RegExp(`^/${lang}/`);
+  const regex = new RegExp(`^/${lang}`);
 
   return (
     <Navbar id="navbar" active={showMenu}>
@@ -23,7 +21,7 @@ const CustomNavbar = () => {
           <Navbar.Item renderAs={Link} to="/">
             <Icon name="home" />
             <Element renderAs="span" ml={2}>
-              React Bulma Components
+              <Trans>React Bulma Components</Trans>
             </Element>
           </Navbar.Item>
           <Navbar.Burger
@@ -42,22 +40,20 @@ const CustomNavbar = () => {
               exact
               activeClassName="is-active"
             >
-              Getting Started
+              <Trans>Getting Started</Trans>
             </Navbar.Item>
-            <Navbar.Item desktop={{ display: 'hidden' }}>
+            <Navbar.Item desktop={{ display: 'hidden' }} renderAs="span">
               <Button.Group align="center">
                 <Button
                   color="ghost"
-                  to={pathname.replace(regex, '/en/')}
-                  active={lang === 'en'}
+                  to={pathname.replace(regex, '/en')}
                   renderAs={RouterLink}
                 >
                   <Trans>English</Trans>
                 </Button>
                 <Button
                   color="ghost"
-                  to={pathname.replace(regex, '/es/')}
-                  active={lang === 'wa'}
+                  to={pathname.replace(regex, '/es')}
                   renderAs={RouterLink}
                 >
                   <Trans>Spanish</Trans>
@@ -90,14 +86,14 @@ const CustomNavbar = () => {
               <Navbar.Dropdown right>
                 <Navbar.Item
                   textAlign="right"
-                  to={pathname.replace(regex, '/en/')}
+                  to={pathname.replace(regex, '/en')}
                   active={lang === 'en'}
                   renderAs={RouterLink}
                 >
                   <Trans>English</Trans>
                 </Navbar.Item>
                 <Navbar.Item
-                  to={pathname.replace(regex, '/es/')}
+                  to={pathname.replace(regex, '/es')}
                   active={lang === 'es'}
                   renderAs={RouterLink}
                 >

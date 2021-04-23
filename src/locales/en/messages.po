@@ -13,77 +13,81 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/footer/footer.js:28
-msgid "All right reserved {0}"
-msgstr "All right reserved {0}"
+#: src/screens/main/components/columns-example/columns-example.js:58
+msgid "Add Column"
+msgstr "Add Column"
 
-#: src/screens/main/main.js:41
-msgid "Easy to use"
-msgstr "Easy to use"
-
-#: src/components/layout/components/navbar/navbar.js:44
-#: src/components/layout/components/navbar/navbar.js:81
+#: src/components/layout/components/navbar/navbar.js:52
+#: src/components/layout/components/navbar/navbar.js:93
 msgid "English"
 msgstr "English"
+
+#: src/screens/main/main.js:50
+msgid "Fast & Modular"
+msgstr "Fast & Modular"
 
 #: src/screens/main/components/banner/banner.js:88
 msgid "First Steps"
 msgstr "First Steps"
 
+#: src/components/footer/footer.js:21
+msgid "Getting Started"
+msgstr "Getting Started"
+
+#: src/components/footer/footer.js:16
+msgid "Home"
+msgstr "Home"
+
 #: src/screens/main/main.js:53
-msgid "Include only the code you use"
-msgstr "Include only the code you use"
-
-#: src/screens/main/main.js:44
-msgid "Just import it and use it"
-msgstr "Just import it and use it"
-
-#: src/screens/main/main.js:32
-msgid "Light Weight"
-msgstr "Light Weight"
-
-#: src/screens/main/main.js:62
-msgid "Made thinking on <0>Mobile first</0>"
-msgstr "Made thinking on <0>Mobile first</0>"
+msgid "Include only components that you need reducing the size of your final bundle out of the box. With almost <0>no external dependncies</0> each component renders really fast."
+msgstr "Include only components that you need reducing the size of your final bundle out of the box. With almost <0>no external dependncies</0> each component renders really fast."
 
 #: src/screens/getting-started/getting-started.js:17
 msgid "Meanwhile check out <0>Storybook</0> for more details"
 msgstr "Meanwhile check out <0>Storybook</0> for more details"
 
-#: src/screens/main/main.js:50
-msgid "Modular"
-msgstr "Modular"
-
-#: src/screens/main/main.js:35
-msgid "No external dependencies"
-msgstr "No external dependencies"
+#: src/screens/main/components/columns-example/columns-example.js:23
+msgid "On mobile the columns stacks"
+msgstr "On mobile the columns stacks"
 
 #: src/screens/main/components/banner/banner.js:47
 msgid "React Bulma Components"
 msgstr "React Bulma Components"
 
-#: src/screens/main/main.js:20
+#: src/screens/main/main.js:24
 msgid "React-Bulma-Components is a library that will allow you to easily use all capabilities of CSS Bulma Framework using components in a declarative way."
 msgstr "React-Bulma-Components is a library that will allow you to easily use all capabilities of CSS Bulma Framework using components in a declarative way."
 
-#: src/screens/main/main.js:59
+#: src/screens/main/components/columns-example/columns-example.js:70
+msgid "Remove a Column"
+msgstr "Remove a Column"
+
+#: src/screens/main/main.js:37
 msgid "Responsive"
 msgstr "Responsive"
+
+#: src/screens/main/components/columns-example/columns-example.js:20
+msgid "Simple 12 columns system"
+msgstr "Simple 12 columns system"
 
 #: src/screens/getting-started/getting-started.js:14
 msgid "Sorry this page its still on develpment"
 msgstr "Sorry this page its still on develpment"
 
-#: src/components/layout/components/navbar/navbar.js:47
-#: src/components/layout/components/navbar/navbar.js:88
+#: src/components/layout/components/navbar/navbar.js:59
+#: src/components/layout/components/navbar/navbar.js:100
 msgid "Spanish"
 msgstr "Spanish"
+
+#: src/components/footer/footer.js:30
+msgid "Storybook"
+msgstr "Storybook"
 
 #: src/screens/main/components/banner/banner.js:100
 msgid "Storybook Demo"
 msgstr "Storybook Demo"
 
-#: src/screens/main/main.js:15
+#: src/screens/main/main.js:19
 msgid "The React wrapper for <0>Bulma</0> that we always wanted"
 msgstr "The React wrapper for <0>Bulma</0> that we always wanted"
 
@@ -98,3 +102,15 @@ msgstr "Toggle to html"
 #: src/screens/main/components/banner/banner.js:50
 msgid "Use Bulma on your React projects with ease"
 msgstr "Use Bulma on your React projects with ease"
+
+#: src/screens/main/main.js:40
+msgid "Use a clear and declarative way how you want the layout to be on each <0>breakpoint</0> the each breakpoint property. Define Size, Offset, and other properties per breakpoint without any css."
+msgstr "Use a clear and declarative way how you want the layout to be on each <0>breakpoint</0> the each breakpoint property. Define Size, Offset, and other properties per breakpoint without any css."
+
+#: src/screens/main/components/columns-example/columns-example.js:40
+msgid "You can add more than 12 columns but we recoment to stick to 12 columns an use nested columns for smaller one"
+msgstr "You can add more than 12 columns but we recoment to stick to 12 columns an use nested columns for smaller one"
+
+#: src/components/footer/footer.js:43
+msgid "© {0}. All Rights Reserved."
+msgstr "© {0}. All Rights Reserved."

@@ -8,24 +8,39 @@ const CustomFooter = () => {
   return (
     <footer id="footer">
       <Container px="3">
-        <Columns breakpoint="mobile">
+        <Columns>
           <Columns.Column size="4">
             <ul>
               <li>
                 <Link to="/" exact activeClassName="is-active">
-                  Home
+                  <Trans>Home</Trans>
                 </Link>
               </li>
               <li>
                 <Link to="/getting-started" activeClassName="is-active">
-                  Getting Started
+                  <Trans>Getting Started</Trans>
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://couds.github.io/react-bulma-components/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Trans>Storybook</Trans>
+                </a>
               </li>
             </ul>
           </Columns.Column>
           <Columns.Column />
-          <Columns.Column display="flex" alignItems="flex-end" narrow>
-            <Trans>All right reserved {new Date().getFullYear()}</Trans>
+          <Columns.Column
+            textColor="brand"
+            touch={{ display: 'block', textAlign: 'center' }}
+            desktop={{ display: 'flex' }}
+            alignItems="flex-end"
+            narrow
+          >
+            <Trans>© {new Date().getFullYear()}. All Rights Reserved.</Trans>
           </Columns.Column>
         </Columns>
       </Container>
