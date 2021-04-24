@@ -53,7 +53,7 @@ const Banner = () => {
                       npm i --save react-bulma-components
                     </Highlight>
                   </Block>
-                  <Columns breakpoint="mobile">
+                  <Columns breakpoint="mobile" className="badges">
                     <Columns.Column
                       narrow
                       renderAs="a"

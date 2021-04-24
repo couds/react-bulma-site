@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Container, Element, Navbar } from 'react-bulma-components';
 import Icon from 'components/icon';
 import { useParams, Link as RouterLink, useLocation } from 'react-router-dom';
@@ -13,6 +13,10 @@ const CustomNavbar = () => {
   const [hasShadow, setHasShadow] = useState(false);
   const { lang } = useParams();
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    setShowMenu(false);
+  }, [pathname]);
 
   useState(() => {
     const listener = () => {

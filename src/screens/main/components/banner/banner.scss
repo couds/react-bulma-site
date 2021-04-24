@@ -30,7 +30,11 @@
     }
   }
 
-  
+  .badges{
+    @media screen and (max-width: $tablet - 1px) {
+      justify-content: center;
+    }
+  }
 
   .bottom {
     position: absolute;
