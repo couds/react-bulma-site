@@ -17,6 +17,7 @@ import Footer from 'components/footer/footer';
 import Analytics from 'components/analytics';
 
 import './index.scss';
+import { t } from '@lingui/macro';
 
 i18n.loadLocaleData({
   en: { plurals: en },
@@ -46,10 +47,42 @@ const App = () => {
   }, [pathname]);
 
   useEffect(() => {
+    ['en', 'es'].forEach((language) => {
+      const existingElement = document.querySelector(`#hreflang-${language}`);
+      if (existingElement && language === lang) {
+        document.head.removeChild(existingElement);
+        return;
+      }
+
+      if (language === lang) {
+        return;
+      }
+
+      const hrefLang = existingElement || document.createElement('link');
+      hrefLang.id = `hreflang-${language}`;
+      hrefLang.rel = 'alternate';
+      hrefLang.href = `${window.location.origin}${pathname.replace(
+        new RegExp(`^/${lang}`),
+        `/${language}`,
+      )}`;
+      hrefLang.hreflang = language;
+      if (!existingElement) {
+        document.head.appendChild(hrefLang);
+      }
+    });
+  }, [pathname]);
+
+  useEffect(() => {
     import(`locales/${lang}/messages`).then((locale) => {
       i18n.load(lang, locale.messages);
       i18n.activate(lang);
       setMessages(locale.messages);
+      const description = document.createElement('meta');
+      description.name = 'description';
+      description.content = i18n._(
+        t`A lightweight, up to date, and crazy fast React wrapper for Bulma.io CSS Framework. Use your favorite CSS framework as React Components`,
+      );
+      document.head.appendChild(description);
     });
   }, [lang]);
 
