@@ -17,11 +17,11 @@ const Feature = ({ image, children, reverse, ...props }) => {
     >
       <Hero.Body>
         <Container>
-          <Columns>
+          <Columns centered>
             <Columns.Column narrow className="feature-image">
               <img src={image} alt="feature" />
             </Columns.Column>
-            <Columns.Column>
+            <Columns.Column desktop={{ size: 6 }}>
               <Content>{children}</Content>
             </Columns.Column>
           </Columns>
