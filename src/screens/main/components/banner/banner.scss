@@ -30,13 +30,7 @@
     }
   }
 
-  .badge {
-    max-height: 20px;
-    max-width: 150px;
-    &:not(:last-child) {
-      margin-right: 2rem;
-    }
-  }
+  
 
   .bottom {
     position: absolute;

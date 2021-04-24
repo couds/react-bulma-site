@@ -4,7 +4,6 @@ import {
   Button,
   Columns,
   Container,
-  Element,
   Heading,
   Hero,
   Image,
@@ -46,7 +45,7 @@ const Banner = () => {
                   >
                     <Trans>React Bulma Components</Trans>
                   </Heading>
-                  <Heading size={2} renderAs="h1">
+                  <Heading size={2} mobile={{ textSize: 3 }} renderAs="h1">
                     <Trans>Use Bulma on your React projects with ease</Trans>
                   </Heading>
                   <Block style={{ height: 49 }}>
@@ -54,8 +53,9 @@ const Banner = () => {
                       npm i --save react-bulma-components
                     </Highlight>
                   </Block>
-                  <Element display="flex" className="is-centered-touch">
-                    <Block
+                  <Columns breakpoint="mobile">
+                    <Columns.Column
+                      narrow
                       renderAs="a"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -68,8 +68,10 @@ const Banner = () => {
                         alt="downloads per month"
                         src="https://img.shields.io/npm/dm/react-bulma-components.svg"
                       />
-                    </Block>
-                    <Block
+                    </Columns.Column>
+                    <Columns.Column
+                      narrow
+                      mobile={{ display: 'hidden' }}
                       renderAs="a"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -82,14 +84,16 @@ const Banner = () => {
                         alt="downloads per month"
                         src="https://img.shields.io/github/release/couds/react-bulma-components.svg"
                       />
-                    </Block>
-                    <Block
-                      renderAs="iframe"
-                      title="github-stars"
-                      className="badge"
-                      src="https://ghbtns.com/github-btn.html?user=couds&repo=react-bulma-components&type=star&count=true&size=medium"
-                    />
-                  </Element>
+                    </Columns.Column>
+                    <Columns.Column narrow>
+                      <iframe
+                        width="100"
+                        height="20"
+                        title="github-stars"
+                        src="https://ghbtns.com/github-btn.html?user=couds&repo=react-bulma-components&type=star&count=true&size=medium"
+                      />
+                    </Columns.Column>
+                  </Columns>
                   <Button.Group className="is-centered-touch">
                     <Button
                       color="brand"
