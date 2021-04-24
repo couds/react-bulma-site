@@ -1,0 +1,10 @@
+@import "variables.scss";
+
+#example {
+  .interactive {
+    min-height: 475px;
+    @media screen and (max-width: $tablet) {
+      min-height: unset;
+    }
+  }
+}

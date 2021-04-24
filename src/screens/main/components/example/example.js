@@ -3,6 +3,8 @@ import CodeExample from 'components/code-example';
 import { Block, Box, Button, Element, Form } from 'react-bulma-components';
 import Icon from 'components/icon';
 
+import './example.scss';
+
 const exampleCode = {
   reactCode: `
 <Form.Field>
@@ -58,7 +60,7 @@ const Example = () => {
     return setForm({ ...form, [target.name]: target.value });
   };
   return (
-    <Block>
+    <Block id="example">
       <Box paddingless style={{ overflow: 'hidden' }}>
         <CodeExample
           codeMaxHeight={500}
@@ -70,7 +72,7 @@ const Example = () => {
             display="flex"
             flexDirection="column"
             justifyContent="center"
-            style={{ minHeight: 475 }}
+            className="interactive"
           >
             <Form.Field>
               <Form.Label>Name</Form.Label>
