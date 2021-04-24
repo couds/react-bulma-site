@@ -10,7 +10,7 @@ import {
   Image,
 } from 'react-bulma-components';
 import { Trans } from '@lingui/macro';
-import mascot from 'assets/images/happy-mascot.webp';
+import mascot from 'assets/images/happy-mascot.png';
 
 import './banner.scss';
 import Highlight from 'components/highlight';
@@ -70,6 +70,20 @@ const Banner = () => {
                       />
                     </Block>
                     <Block
+                      renderAs="a"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://www.npmjs.com/package/react-bulma-components"
+                      className="badge"
+                    >
+                      <img
+                        width="94"
+                        height="20"
+                        alt="downloads per month"
+                        src="https://img.shields.io/github/release/couds/react-bulma-components.svg"
+                      />
+                    </Block>
+                    <Block
                       renderAs="iframe"
                       title="github-stars"
                       className="badge"
@@ -107,7 +121,7 @@ const Banner = () => {
         </Container>
       </Hero.Body>
       <Container display="relative" style={{ width: '100%' }}>
-        <Image src={mascot} size={128} className="mascot" />
+        <Image alt="mascot" src={mascot} size={128} className="mascot" />
       </Container>
       <svg
         xmlns="http://www.w3.org/2000/svg"

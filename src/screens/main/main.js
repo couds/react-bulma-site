@@ -4,6 +4,7 @@ import { Trans } from '@lingui/macro';
 import Icon from 'components/icon';
 import responsivePng from 'assets/images/code/responsive.png';
 import modularPng from 'assets/images/code/modular.png';
+import typescriptPng from 'assets/images/code/typescript.png';
 import Banner from './components/banner';
 import Example from './components/example';
 import Feature from './components/feature';
@@ -61,6 +62,18 @@ const Main = () => {
             Include only components that you need reducing the size of your
             final bundle out of the box. With almost{' '}
             <b>no external dependncies</b> each component renders really fast.
+          </Trans>
+        </Heading>
+      </Feature>
+      <Feature color="brand" image={typescriptPng}>
+        <Heading size={4}>
+          <Icon name="typescript" text />{' '}
+          <Trans>Fully Typescript friendly</Trans>
+        </Heading>
+        <Heading subtitle size={5}>
+          <Trans>
+            Every component include a typescript definition to allow{' '}
+            <b>type support</b> for each prop. PropTypes are also availables.
           </Trans>
         </Heading>
       </Feature>

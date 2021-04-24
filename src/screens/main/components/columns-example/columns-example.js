@@ -1,5 +1,6 @@
 import { Trans } from '@lingui/macro';
-import React, { useState } from 'react';
+import { useAnalytics } from 'components/analytics/analytics';
+import React, { useEffect, useRef, useState } from 'react';
 import {
   Block,
   Button,
@@ -13,6 +14,19 @@ import './columns-example.scss';
 
 const ColumnsExample = () => {
   const [columns, setColumns] = useState(3);
+  const doNotSend = useRef(true);
+  const { gtm } = useAnalytics();
+
+  useEffect(() => {
+    if (doNotSend.current) {
+      doNotSend.current = false;
+      return;
+    }
+    gtm.sendEvent({
+      category: 'user-interaction',
+      action: 'add-remove-column',
+    });
+  }, [columns]);
 
   return (
     <Block px={3} className="columns-example" renderAs={Section}>

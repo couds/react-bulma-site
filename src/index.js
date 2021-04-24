@@ -11,10 +11,12 @@ import {
   useParams,
   useLocation,
 } from 'react-router-dom';
-import './index.scss';
 import Layout from 'components/layout';
 import { en, es } from 'make-plural/plurals';
 import Footer from 'components/footer/footer';
+import Analytics from 'components/analytics';
+
+import './index.scss';
 
 i18n.loadLocaleData({
   en: { plurals: en },
@@ -81,7 +83,9 @@ ReactDOM.render(
     <Router>
       <Switch>
         <Route path="/:lang(es|en)/">
-          <App />
+          <Analytics>
+            <App />
+          </Analytics>
         </Route>
         <Route path="*">
           <Redirect to="/en" />

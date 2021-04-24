@@ -59,9 +59,9 @@ const Example = () => {
   };
   return (
     <Block>
-      <Box paddingless style={{ overflow: 'hidden', minHeight: 457 }}>
+      <Box paddingless style={{ overflow: 'hidden' }}>
         <CodeExample
-          codeMaxHeight={481}
+          codeMaxHeight={500}
           {...exampleCode}
           alignment="horizontal"
         >
@@ -70,7 +70,7 @@ const Example = () => {
             display="flex"
             flexDirection="column"
             justifyContent="center"
-            style={{ height: '100%' }}
+            style={{ minHeight: 475 }}
           >
             <Form.Field>
               <Form.Label>Name</Form.Label>

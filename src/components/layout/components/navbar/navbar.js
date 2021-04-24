@@ -6,16 +6,36 @@ import { Trans } from '@lingui/macro';
 import Link from 'components/link';
 
 import './navbar.scss';
+import classNames from 'classnames';
 
 const CustomNavbar = () => {
   const [showMenu, setShowMenu] = useState();
+  const [hasShadow, setHasShadow] = useState(false);
   const { lang } = useParams();
   const { pathname } = useLocation();
+
+  useState(() => {
+    const listener = () => {
+      setHasShadow(window.scrollY > 75);
+    };
+    window.addEventListener('scroll', listener);
+    return () => {
+      window.removeEventListener('scroll', listener);
+    };
+  }, []);
 
   const regex = new RegExp(`^/${lang}`);
 
   return (
-    <Navbar id="navbar" active={showMenu}>
+    <Navbar
+      className={classNames({
+        'has-dropshadow': hasShadow,
+      })}
+      color="brand"
+      id="navbar"
+      active={showMenu}
+      fixed="top"
+    >
       <Container>
         <Navbar.Brand>
           <Navbar.Item renderAs={Link} to="/">
@@ -73,6 +93,7 @@ const CustomNavbar = () => {
             <Navbar.Item
               href="https://github.com/couds/react-bulma-components"
               target="_blank"
+              rel="noopener"
             >
               <Icon name="github" />
             </Navbar.Item>
