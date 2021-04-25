@@ -2,14 +2,25 @@
 
 .main-feature {
   .feature-image {
-    perspective: 1000px;
     text-align: center;
     width: 100%;
     max-width: 415px;
     min-height: 252px;
+    position: relative;
+    &::before {
+      z-index: -1;
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0rem;
+      bottom: 0rem;
+      transform: translate(-2rem, -2rem);
+      border-radius: 1rem;
+      background-color: fade-out($color: $brand, $amount: 0.75);
+    }
     img {
-      transform: rotateY(25deg);
-      outline: 1px solid transparent;
+      z-index: 2;
     }
   }
   .content {
@@ -18,28 +29,56 @@
     justify-content: center;
     height: 100%;
   }
-  &.is-reverse {
+  .icon {
+    margin-bottom: 0.75rem;
+  }
+  &.is-bottom {
+    .feature-image::before {
+      transform: translate(-2rem, 2rem);
+    }
+  }
+  &.is-right {
     text-align: right;
     .columns {
       flex-direction: row-reverse;
     }
-    .feature-image {
-      img{
-        transform: rotateY(-25deg);
-      }
+    .icon {
+      align-self: flex-end;
+    }
+    .feature-image::before {
+      transform: translate(2rem, 2rem);
     }
   }
+  @media screen and (max-width: $desktop) {
+    .feature-image::before {
+      display: none;
+    }
+  }
+
   @media screen and (max-width: $tablet) {
     text-align: center;
-    &.is-reverse {
+    &.is-right {
       text-align: center;
     }
     .feature-image {
-      perspective: unset;
       max-width: 100%;
     }
     .content {
       display: block;
     }
+  }
+}
+
+.main-feature__square {
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 1rem;
+  background-color: fade-out($color: $brand, $amount: 0.75);
+  width: 7rem;
+  &.is-large {
+    width: 20rem;
+  }
+  @media screen and (max-width: $desktop) {
+    display: none;
   }
 }

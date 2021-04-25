@@ -5,12 +5,12 @@ import classnames from 'classnames';
 import './feature.scss';
 import Section from '../section';
 
-const Feature = ({ image, children, reverse, ...props }) => {
+const Feature = ({ image, children, position, ...props }) => {
   return (
     <Hero
       gradient
       className={classnames('main-feature', {
-        'is-reverse': reverse,
+        [`is-${position}`]: position,
       })}
       renderAs={Section}
       {...props}
@@ -18,8 +18,10 @@ const Feature = ({ image, children, reverse, ...props }) => {
       <Hero.Body>
         <Container>
           <Columns centered>
-            <Columns.Column narrow className="feature-image">
-              <img src={image} alt="feature" />
+            <Columns.Column narrow>
+              <div className="feature-image">
+                <img src={image} alt="feature" />
+              </div>
             </Columns.Column>
             <Columns.Column desktop={{ size: 6 }}>
               <Content>{children}</Content>
@@ -28,6 +30,17 @@ const Feature = ({ image, children, reverse, ...props }) => {
         </Container>
       </Hero.Body>
     </Hero>
+  );
+};
+
+Feature.Square = ({ style, size }) => {
+  return (
+    <div
+      style={style}
+      className={classnames('main-feature__square', {
+        [`is-${size}`]: size,
+      })}
+    />
   );
 };
 
