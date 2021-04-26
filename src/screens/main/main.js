@@ -70,7 +70,7 @@ const Main = () => {
             <Trans>
               Include only components that you need reducing the size of your
               final bundle out of the box. With almost{' '}
-              <b>no external dependncies</b> each component renders really fast.
+              <b>no external dependencies</b> each component renders really fast.
             </Trans>
           </Heading>
         </Feature>
