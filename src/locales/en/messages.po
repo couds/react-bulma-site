@@ -8,7 +8,7 @@ msgstr ""
 "Language: en\n"
 "Project-Id-Version: react-bulma-components\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-04-26 08:10\n"
+"PO-Revision-Date: 2021-04-26 08:19\n"
 "Last-Translator: \n"
 "Language-Team: English\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -58,7 +58,7 @@ msgstr "Home"
 
 #: src/screens/main/main.js:61
 msgid "Include only components that you need reducing the size of your final bundle out of the box. With almost <0>no external dependncies</0> each component renders really fast."
-msgstr "Include only components that you need reducing the size of your final bundle out of the box. With almost <0>no external dependncies</0> each component renders really fast."
+msgstr "Include only components that you need reducing the size of your final bundle out of the box. With almost <0>no external dependencies</0> each component renders really fast."
 
 #: src/screens/getting-started/getting-started.js:17
 msgid "Meanwhile check out <0>Storybook</0> for more details"
